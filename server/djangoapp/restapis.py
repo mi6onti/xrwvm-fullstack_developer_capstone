@@ -1,14 +1,16 @@
 # Uncomment the imports below before you add the function code
-# import requests
+import requests
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
 backend_url = os.getenv(
-    'backend_url', default="http://localhost:3030")
+    'backend_url',
+     default="http://localhost:3030")
+
 sentiment_analyzer_url = os.getenv(
-    'https://sentianalyzer.1ntqac4fsc7f.us-south.codeengine.appdomain.cloud//',
+    'sentiment_analyzer_url',
     default="http://localhost:5050/")
 
 def get_request(endpoint, **kwargs):
