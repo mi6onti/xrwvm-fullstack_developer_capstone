@@ -34,7 +34,7 @@ ALLOWED_HOSTS = [
     'localhost', 
     domain_name + '.proxy.cognitiveclass.ai'
 ]
-CSRF_TRUSTED_ORIGINS = 
+CSRF_TRUSTED_ORIGINS = [
     domain_name + '.proxy.cognitiveclass.ai'
 ]
 
