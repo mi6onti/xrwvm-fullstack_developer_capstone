@@ -28,10 +28,11 @@ SECRET_KEY =\
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-domain_name = 'https://mishonti-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01'
+domain = 'https://mishonti-8000'
+domain_name = domain + '.theiadockernext-0-labs-prod-theiak8s-4-tor01'
 
 ALLOWED_HOSTS = [
-    'localhost', 
+    'localhost',
     domain_name + '.proxy.cognitiveclass.ai'
 ]
 CSRF_TRUSTED_ORIGINS = [
