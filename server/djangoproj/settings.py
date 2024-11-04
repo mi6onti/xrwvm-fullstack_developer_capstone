@@ -28,12 +28,14 @@ SECRET_KEY =\
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+domain_name = 'https://mishonti-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01'
+
 ALLOWED_HOSTS = [
     'localhost', 
-    'https://mishonti-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai'
+    domain_name + '.proxy.cognitiveclass.ai'
 ]
-CSRF_TRUSTED_ORIGINS = [
-    'https://mishonti-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai'
+CSRF_TRUSTED_ORIGINS = 
+    domain_name + '.proxy.cognitiveclass.ai'
 ]
 
 REST_FRAMEWORK = {
@@ -96,10 +98,12 @@ DATABASES = {
     }
 }
 
+validation_namespace = 'django.contrib.auth.password_validation'
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
-        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        validation_namespace + '.UserAttributeSimilarityValidator',
     },
     {
         'NAME':
